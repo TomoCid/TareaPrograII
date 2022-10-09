@@ -9,7 +9,7 @@ public class OrdenCompra {
         /*Agregamos dos variables extras, esto ya que nuestro método OrdenCompra ira recibiendo multiples DetalleCompra
         en una lista, también usaremos una variable índice para manejar los DetalleCompra dentro de esta lista, usaremos
         una variable cliente dentro de la orden para poder asociarlo a ella, y finalmente usamos una variable deuda ya
-        que consideramos importante tener un metodo capaz de comprobar si la orden debe pagarse o ya esta pagada*/
+        que consideramos importante tener un método capaz de comprobar si la orden debe pagarse o ya esta pagada*/
         private DetalleCompra[] detalles;
         private int indice=0;
         private Cliente cliente;
@@ -125,6 +125,7 @@ public class OrdenCompra {
 
     @Override
     public String toString() {
+
         return "Orden de Compra de "+this.cliente.getName()+"\nFecha: "+this.fecha+"\nEstado: "
                 +this.estado;
     }

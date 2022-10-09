@@ -1,15 +1,14 @@
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-//A
 public class Main {
     public static void main(String[] args) {
-
+        //
         // EJEMPLOS DE CLASES
         /*
          * EN LA PRIMERA PARTE DE LOS EJEMPLOS SE USARAN MULTIPLES SOUT PARA AYUDAR A
          * ENTENDER EN LA SALIDA LO QUE SE
-         * EXPLICA EN CODIGO, LUEGO SOLO SE MUESTRAN EJEMPLOS PEDIDOS PARA LA TAREA.
+         * EXPLICA EN CÓDIGO, LUEGO SOLO SE MUESTRAN EJEMPLOS PEDIDOS PARA LA TAREA.
          */
 
         // Creamos una fecha para mantener orden en nuestras compras y boletas
@@ -18,7 +17,7 @@ public class Main {
         // Creamos un cliente
         Cliente cliente1 = new Cliente("Elsa Patito", "2121");
 
-        // Crear direccion
+        // Crear dirección
         Direccion Cliente1Direccion = new Direccion("Pasaje puente alto");
 
         // Creando dos articulo
@@ -36,10 +35,10 @@ public class Main {
          * puede agregar la cantidad de detalles que se requiera. Finalmente con los
          * métodos de OrdenCompra podemos
          * obtener los precios y el peso.
-         * Punto para aclarar: Se entiende por OrdenCompra la orden total de articulos
+         * Punto para aclarar: Se entiende por OrdenCompra la orden total de artículos
          * contenidos en los Detalles.
          * Punto para aclarar: Se entiende por DetalleCompra la cantidad total de un
-         * tipo de articulo.
+         * tipo de artículo.
          */
         OrdenCompra Orden1 = new OrdenCompra(cliente1, fecha, "No Pagado");
         Orden1.addDetalles(Mesas);
@@ -47,18 +46,18 @@ public class Main {
 
         // Se imprime por terminal la orden y sus datos de manera ordenada:
         System.out.println(Orden1.toString());
-        // Si se quiere mas informacion, se pueden llamar a los metodos
+        // Si se quiere más información, se pueden llamar a los métodos
         System.out.println("Precio sin IVA: " + Orden1.calPrecioSinIVA() + "\nIVA Total:" +
                 Orden1.CalcIVA() + "\nPrecio total: " + Orden1.CalcPrecio() + "\n");
         System.out.println(Mesas.toString());
         System.out.println(Pelotas.toString());
 
         /*
-         * Ejemplo pago en efectivo, generamos un pago en el que asiganmos por
+         * Ejemplo pago en efectivo, generamos un pago en el que asignamos por
          * constructor la cantidad total a pagar
-         * y la cantidad de dinero con la que se pagara, el metodo CalDevolucion
-         * devolvera un string con el vuelto
-         * o la deuda respectivamente, ademas cada orden tiene su propia variable deuda
+         * y la cantidad de dinero con la que se pagara, el método CalDevolucion
+         * devolverá un string con el vuelto
+         * o la deuda respectivamente, además cada orden tiene su propia variable deuda
          * con la cual se verificara el estado
          * (Pagado, No pagado).
          */
@@ -66,7 +65,7 @@ public class Main {
         Efectivo pago1 = new Efectivo(Orden1.CalcPrecio(), 477);
         System.out.println(pago1.CalDevolucion(Orden1));
 
-        // Ejemplo creacion de una boleta, una boleta recibe un numero, el rut de un
+        // Ejemplo creación de una boleta, una boleta recibe un número, el rut de un
         // cliente, la fecha y lo que se pagó.
         Boleta boleta1 = new Boleta("0001", cliente1.getRut(), fecha, 477);
         boleta1.addDirrecion(Cliente1Direccion.getDireccion());
@@ -101,7 +100,7 @@ public class Main {
         System.out.println(Orden1.Estado());
 
         /*
-         * A continuacion un ejemplo de un cliente que realiza dos ordenes de compra y
+         * A continuación un ejemplo de un cliente que realiza dos ordenes de compra y
          * las paga con transferencia y
          * tarjeta.
          */

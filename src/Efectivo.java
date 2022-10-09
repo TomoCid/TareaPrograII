@@ -1,6 +1,6 @@
 public class Efectivo extends Pago{
 
-    /* Cada tipo de pago tendra sus propios metodos para hacer saber al cliente
+    /* Cada tipo de pago tendrá sus propios métodos para hacer saber al cliente
     cuanto le corresponde de vuelto o cuanta deuda tiene.
     Trabajaremos directamente con una orden y modificaremos su variable deuda desde esta clase.
     */

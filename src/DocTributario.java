@@ -2,10 +2,10 @@ import java.util.Date;
 
 public class DocTributario {
 
-    /* Los documentos tributarios, boleta o factura tendran los datos del cliente, nombre, rut, direccion, fecha
+    /* Los documentos tributarios, boleta o factura tendrán los datos del cliente, nombre, rut, dirección, fecha
     de compra y el monto que se pago.
-    La direccion se agregara a los documentos con su propio metodo addDireccion
-    (Esto tambien es posible hacerlo por constructor pero consideramos que era mejor hacerlo de este modo para
+    La dirección se agregará a los documentos con su propio método addDireccion
+    (Esto también es posible hacerlo por constructor pero consideramos que era mejor hacerlo de este modo para
     respetar el UML).
      */
 
