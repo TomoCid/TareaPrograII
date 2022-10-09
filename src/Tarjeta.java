@@ -1,5 +1,5 @@
 public class Tarjeta extends Pago {
-    // a
+    // n
     /*
      * AL pagar con tarjeta se entiende que se pagara la cantidad exacta del monto o
      * menos,
